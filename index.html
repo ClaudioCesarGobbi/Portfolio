@@ -5,19 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi Portfolio - Desarrollador</title>
     <link rel="stylesheet" href="styles.css">
-    <!-- Enlaces a fuentes e iconos desde internet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Arial:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Menú de navegación - Barra superior con enlaces -->
     <nav class="menu">
         <div class="menu-contenedor">
-            <!-- Logo del portfolio -->
             <div class="logo">
                 <a href="#inicio">Mi Portfolio</a>
             </div>
-            <!-- Lista de enlaces del menú -->
             <ul class="menu-lista">
                 <li><a href="#inicio">Inicio</a></li>
                 <li><a href="#sobre-mi">Sobre Mí</a></li>
@@ -25,7 +21,6 @@
                 <li><a href="#proyectos">Proyectos</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
-            <!-- Botón hamburguesa para móviles -->
             <div class="boton-menu">
                 <span></span>
                 <span></span>
@@ -34,24 +29,20 @@
         </div>
     </nav>
 
-    <!-- Sección de presentación inicial -->
     <section id="inicio" class="presentacion">
         <div class="contenedor">
             <div class="presentacion-contenido">
-                <!-- Texto de presentación -->
                 <div class="texto-presentacion">
                     <h1>Hola, soy <span class="nombre-destacado">Claudio César Gobbi</span></h1>
                     <p class="titulo-profesional">Desarrollador de Software</p>
                     <p class="descripcion">
                         Dedicado a crear soluciones digitales innovadoras y eficientes.
                     </p>
-                    <!-- Botones de acción -->
                     <div class="botones">
                         <a href="#proyectos" class="boton boton-principal">Ver Proyectos</a>
                         <a href="#contacto" class="boton boton-secundario">Contactar</a>
                     </div>
                 </div>
-                <!-- Imagen de perfil -->
                 <div class="imagen-perfil">
                     <img src="images/foto-perfil.png" alt="Claudio César Gobbi" class="foto">
                 </div>
@@ -59,7 +50,6 @@
         </div>
     </section>
 
-    <!-- Sección de información general -->
     <section id="sobre-mi" class="sobre-mi">
         <div class="contenedor">
             <h2 class="titulo-seccion">Sobre Mí</h2>
@@ -72,7 +62,6 @@
                     <p>
                         Mi enfoque se centra en escribir código limpio, escalable y mantenible. Siempre priorizando las buenas prácticas de desarrollo y la eficiencia.
                     </p>
-                    <!-- Estadísticas personales -->
                     <div class="estadisticas">
                         <div class="estadistica">
                             <h3>Estudios:</h3>
@@ -88,12 +77,10 @@
         </div>
     </section>
 
-    <!-- Sección de conocimientos -->
     <section id="conocimientos" class="conocimientos">
         <div class="contenedor">
             <h2 class="titulo-seccion">Conocimientos</h2>
             <div class="grid-conocimientos">
-                <!-- Categoría Frontend -->
                 <div class="categoria-conocimiento">
                     <h3>Frontend</h3>
                     <div class="lista-conocimientos">
@@ -111,7 +98,6 @@
                         </div>
                     </div>
                 </div>
-                <!-- Categoría Backend -->
                 <div class="categoria-conocimiento">
                     <h3>Backend & Bases de Datos</h3>
                     <div class="lista-conocimientos">
@@ -141,7 +127,6 @@
                         </div>
                     </div>
                 </div>
-                <!-- Categoría Herramientas -->
                 <div class="categoria-conocimiento">
                     <h3>Herramientas</h3>
                     <div class="lista-conocimientos">
@@ -167,12 +152,10 @@
         </div>
     </section>
 
-    <!-- Sección de proyectos -->
     <section id="proyectos" class="proyectos">
         <div class="contenedor">
             <h2 class="titulo-seccion">Proyectos</h2>
             <div class="grid-proyectos">
-                <!-- Proyecto 1 -->
                 <div class="tarjeta-proyecto">
                     <div class="imagen-proyecto">
                         <img src="Proyectos/Proyecto1.1.png" alt="Proyecto 1">
@@ -190,7 +173,6 @@
                         </div>
                     </div>
                 </div>
-                <!-- Proyecto 2 -->
                 <div class="tarjeta-proyecto">
                     <div class="imagen-proyecto">
                         <img src="Proyectos/Proyecto2.png" alt="Proyecto 2">
@@ -208,7 +190,6 @@
                         </div>
                     </div>
                 </div>
-                <!-- Proyecto 3 -->
                 <div class="tarjeta-proyecto">
                     <div class="imagen-proyecto">
                         <img src="Proyectos/Proyecto3.1.png" alt="Proyecto 3">
@@ -230,7 +211,6 @@
         </div>
     </section>
 
-    <!-- Sección de redes sociales -->
     <section class="redes-sociales">
         <div class="contenedor">
             <h2 class="titulo-seccion">Conecta Conmigo</h2>
@@ -255,12 +235,10 @@
         </div>
     </section>
 
-    <!-- Formulario de contacto -->
     <section id="contacto" class="contacto">
         <div class="contenedor">
             <h2 class="titulo-seccion">Contacto</h2>
             <div class="contenido-contacto">
-                <!-- Información de contacto -->
                 <div class="info-contacto">
                     <h3>¡Hablemos!</h3>
                     <p>¿Tenes un proyecto en mente, un problema a resolver o mejora que implementar en tu sistema? Me encantaría escuchar sobre ello y cómo puedo ayudarte.</p>
@@ -281,7 +259,6 @@
                         </div>
                     </div>
                 </div>
-                <!-- Formulario de contacto -->
                 <form class="formulario-contacto">
                     <div class="grupo-formulario">
                         <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
@@ -301,7 +278,6 @@
         </div>
     </section>
 
-    <!-- Modal para imágenes de proyectos -->
     <div id="modal-imagen" class="modal">
         <div class="modal-contenido">
             <span class="cerrar-modal">&times;</span>
@@ -309,14 +285,12 @@
         </div>
     </div>
 
-    <!-- Pie de página -->
     <footer class="pie-pagina">
         <div class="contenedor">
             <p>&copy; 2025 Claudio César Gobbi.</p>
         </div>
     </footer>
 
-    <!-- Enlace al archivo JavaScript -->
     <script src="script.js"></script>
 </body>
 </html>
