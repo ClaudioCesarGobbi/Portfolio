@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Portfolio - Desarrollador</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Enlaces a fuentes e iconos desde internet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Arial:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Menú de navegación - Barra superior con enlaces -->
+    <nav class="menu">
+        <div class="menu-contenedor">
+            <!-- Logo del portfolio -->
+            <div class="logo">
+                <a href="#inicio">Mi Portfolio</a>
+            </div>
+            <!-- Lista de enlaces del menú -->
+            <ul class="menu-lista">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#sobre-mi">Sobre Mí</a></li>
+                <li><a href="#conocimientos">Conocimientos</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+            <!-- Botón hamburguesa para móviles -->
+            <div class="boton-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sección de presentación inicial -->
+    <section id="inicio" class="presentacion">
+        <div class="contenedor">
+            <div class="presentacion-contenido">
+                <!-- Texto de presentación -->
+                <div class="texto-presentacion">
+                    <h1>Hola, soy <span class="nombre-destacado">Claudio César Gobbi</span></h1>
+                    <p class="titulo-profesional">Desarrollador de Software</p>
+                    <p class="descripcion">
+                        Dedicado a crear soluciones digitales innovadoras y eficientes.
+                    </p>
+                    <!-- Botones de acción -->
+                    <div class="botones">
+                        <a href="#proyectos" class="boton boton-principal">Ver Proyectos</a>
+                        <a href="#contacto" class="boton boton-secundario">Contactar</a>
+                    </div>
+                </div>
+                <!-- Imagen de perfil -->
+                <div class="imagen-perfil">
+                    <img src="images/foto-perfil.png" alt="Claudio César Gobbi" class="foto">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de información general -->
+    <section id="sobre-mi" class="sobre-mi">
+        <div class="contenedor">
+            <h2 class="titulo-seccion">Sobre Mí</h2>
+            <div class="contenido-sobre-mi">
+                <div class="texto-sobre-mi">
+                    <p>
+                        Soy un desarrollador de software dedicado, con más de <span id="años-texto">1</span> año de experiencia. 
+                        Me especializo en tecnologías modernas, siempre estoy buscando aprender nuevas herramientas y metodologías para mejorar mis habilidades.
+                    </p>
+                    <p>
+                        Mi enfoque se centra en escribir código limpio, escalable y mantenible. Siempre priorizando las buenas prácticas de desarrollo y la eficiencia.
+                    </p>
+                    <!-- Estadísticas personales -->
+                    <div class="estadisticas">
+                        <div class="estadistica">
+                            <h3>Estudios:</h3>
+                            <p>Tecnicatura Universitaria en Programación.<br>UTN - Gral. Pacheco</p>
+                        </div>
+                        <div class="estadistica">
+                            <h3 id="años-experiencia"></h3>
+                            <p>Años de Experiencia</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de conocimientos -->
+    <section id="conocimientos" class="conocimientos">
+        <div class="contenedor">
+            <h2 class="titulo-seccion">Conocimientos</h2>
+            <div class="grid-conocimientos">
+                <!-- Categoría Frontend -->
+                <div class="categoria-conocimiento">
+                    <h3>Frontend</h3>
+                    <div class="lista-conocimientos">
+                        <div class="conocimiento">
+                            <img src="icons/HTML5.png" alt="HTML5" class="icono">
+                            <span>HTML5</span>
+                        </div>
+                        <div class="conocimiento">
+                            <img src="icons/CSS3.png" alt="CSS3" class="icono">
+                            <span>CSS3</span>
+                        </div>
+                        <div class="conocimiento">
+                            <img src="icons/JavaScript.png" alt="JavaScript" class="icono">
+                            <span>JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Categoría Backend -->
+                <div class="categoria-conocimiento">
+                    <h3>Backend & Bases de Datos</h3>
+                    <div class="lista-conocimientos">
+                        <div class="conocimiento">
+                            <img src="icons/C++.png" alt="C++" class="icono">
+                            <span>C++</span>
+                        </div>
+                        <div class="conocimiento">
+                            <img src="icons/CSharp.png" alt="C#" class="icono">
+                            <span>C#</span>
+                        </div>
+                        <div class="conocimiento">
+                            <img src="icons/ObjectPascal.png" alt="Object Pascal" class="icono">
+                            <span>Object Pascal</span>
+                        </div>
+                        <div class="conocimiento">
+                            <img src="icons/SQLSERVER.png" alt="SQL Server" class="icono">
+                            <span>SQL Server</span>
+                        </div>
+                        <div class="conocimiento">
+                            <img src="icons/Oracle.png" alt="Oracle" class="icono">
+                            <span>Oracle</span>
+                        </div>
+                        <div class="conocimiento">
+                            <img src="icons/.NET-Framework.png" alt=".NET-Framework" class="icono">
+                            <span>.NET Framework</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Categoría Herramientas -->
+                <div class="categoria-conocimiento">
+                    <h3>Herramientas</h3>
+                    <div class="lista-conocimientos">
+                        <div class="conocimiento">
+                            <img src="icons/delphI.png" alt="Delphi" class="icono">
+                            <span>Delphi</span>
+                        </div>
+                        <div class="conocimiento">
+                            <img src="icons/Git.png" alt="Git" class="icono">
+                            <span>Git</span>
+                        </div>
+                        <div class="conocimiento">
+                            <img src="icons/VisualStudioCode.png" alt="VS Code" class="icono">
+                            <span>VS Code</span>
+                        </div>
+                        <div class="conocimiento">
+                            <img src="icons/VisualStudioCommunity.png" alt="Visual Studio" class="icono">
+                            <span>Visual Studio</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de proyectos -->
+    <section id="proyectos" class="proyectos">
+        <div class="contenedor">
+            <h2 class="titulo-seccion">Proyectos</h2>
+            <div class="grid-proyectos">
+                <!-- Proyecto 1 -->
+                <div class="tarjeta-proyecto">
+                    <div class="imagen-proyecto">
+                        <img src="Proyectos/Proyecto1.1.png" alt="Proyecto 1">
+                    </div>
+                    <div class="contenido-proyecto">
+                        <h3>Juego de Consola - Gran Cerdo.</h3>
+                        <p>Juego de dados.</p>
+                        <div class="tecnologias">
+                            <span>C++</span>
+                            <span>C++</span>
+                            <span>C++</span>
+                        </div>
+                        <div class="enlaces-proyecto">
+                            <a href="https://github.com/ClaudioCesarGobbi/Juego-Gran-Cerdo.git" class="boton boton-outline" target="_blank">Código</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Proyecto 2 -->
+                <div class="tarjeta-proyecto">
+                    <div class="imagen-proyecto">
+                        <img src="Proyectos/Proyecto2.png" alt="Proyecto 2">
+                    </div>
+                    <div class="contenido-proyecto">
+                        <h3>Sistema Gestion Test de Aptitud Física</h3>
+                        <p>Aplicación de gestión de tests de capacidades físicas para elaborar planes de entrenamiento y hacer seguimiento de la evolución física de los deportistas.</p>
+                        <div class="tecnologias">
+                            <span>C++</span>
+                            <span>C++</span>
+                            <span>C++</span>
+                        </div>
+                        <div class="enlaces-proyecto">
+                            <a href="https://github.com/ClaudioCesarGobbi/Sistema-Gestion-Test-Aptitud-Fisica.git" class="boton boton-outline" target="_blank">Código</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Proyecto 3 -->
+                <div class="tarjeta-proyecto">
+                    <div class="imagen-proyecto">
+                        <img src="Proyectos/Proyecto3.1.png" alt="Proyecto 3">
+                    </div>
+                    <div class="contenido-proyecto">
+                        <h3>Aplicacion CRUD de Artículos</h3>
+                        <p>Aplicacion de escritorio que permite a los usuarios crear, leer, actualizar y eliminar artículos con interfaz de usuario y base de datos en SQL Server.</p>
+                        <div class="tecnologias">
+                            <span>C#</span>
+                            <span>.NET Framework</span>
+                            <span>SQL Server</span>
+                        </div>
+                        <div class="enlaces-proyecto">
+                            <a href="https://github.com/ClaudioCesarGobbi/TP-WinForm-Equipo-10A..git" class="boton boton-outline" target="_blank">Código</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de redes sociales -->
+    <section class="redes-sociales">
+        <div class="contenedor">
+            <h2 class="titulo-seccion">Conecta Conmigo</h2>
+            <div class="enlaces-redes">
+                <a href="https://ar.linkedin.com/" class="enlace-red" target="_blank">
+                    <img src="icons/Linkedin.png" alt="LinkedIn" class="icono">
+                    <span>LinkedIn</span>
+                </a>
+                <a href="https://github.com/" class="enlace-red" target="_blank">
+                    <img src="icons/GitHub.png" alt="GitHub" class="icono">
+                    <span>GitHub</span>
+                </a>
+                <a href="https://x.com/?lang=es" class="enlace-red" target="_blank">
+                    <img src="icons/X.png" alt="X" class="icono">
+                    <span>X</span>
+                </a>
+                <a href="https://www.instagram.com/" class="enlace-red" target="_blank">
+                    <img src="icons/Instagram.png" alt="Instagram" class="icono">
+                    <span>Instagram</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Formulario de contacto -->
+    <section id="contacto" class="contacto">
+        <div class="contenedor">
+            <h2 class="titulo-seccion">Contacto</h2>
+            <div class="contenido-contacto">
+                <!-- Información de contacto -->
+                <div class="info-contacto">
+                    <h3>¡Hablemos!</h3>
+                    <p>¿Tenes un proyecto en mente, un problema a resolver o mejora que implementar en tu sistema? Me encantaría escuchar sobre ello y cómo puedo ayudarte.</p>
+                    <div class="detalles-contacto">
+                        <div class="item-contacto">
+                            <i class="fas fa-envelope"></i>
+                            <span>claudiocesargobbi@gmail.com</span>
+                        </div>
+                        <div class="item-contacto">
+                            <i class="fas fa-phone"></i>
+                            <span>+54 9 351 xxxxxxx</span>
+                        </div>
+                        <div class="item-contacto">
+                            <a href="https://maps.google.com/?q=Córdoba,Argentina" target="_blank" title="Ver en Google Maps">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Córdoba, Argentina</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Formulario de contacto -->
+                <form class="formulario-contacto">
+                    <div class="grupo-formulario">
+                        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+                    </div>
+                    <div class="grupo-formulario">
+                        <input type="email" id="email" name="email" placeholder="Tu email" required>
+                    </div>
+                    <div class="grupo-formulario">
+                        <input type="text" id="asunto" name="asunto" placeholder="Asunto" required>
+                    </div>
+                    <div class="grupo-formulario">
+                        <textarea id="mensaje" name="mensaje" placeholder="Tu mensaje" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="boton boton-principal">Enviar Mensaje</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal para imágenes de proyectos -->
+    <div id="modal-imagen" class="modal">
+        <div class="modal-contenido">
+            <span class="cerrar-modal">&times;</span>
+            <img id="imagen-modal" src="" alt="Imagen del proyecto">
+        </div>
+    </div>
+
+    <!-- Pie de página -->
+    <footer class="pie-pagina">
+        <div class="contenedor">
+            <p>&copy; 2025 Claudio César Gobbi.</p>
+        </div>
+    </footer>
+
+    <!-- Enlace al archivo JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
+
