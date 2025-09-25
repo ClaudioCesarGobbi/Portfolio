@@ -12,14 +12,20 @@
     <nav class="menu">
         <div class="menu-contenedor">
             <div class="logo">
-                <a href="#inicio">Mi Portfolio</a>
+                <a href="#inicio" data-text="miPortfolio">Mi Portfolio</a>
             </div>
             <ul class="menu-lista">
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#sobre-mi">Sobre Mí</a></li>
-                <li><a href="#conocimientos">Conocimientos</a></li>
-                <li><a href="#proyectos">Proyectos</a></li>
-                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="#inicio" data-text="inicio">Inicio</a></li>
+                <li><a href="#sobre-mi" data-text="sobreMi">Sobre Mí</a></li>
+                <li><a href="#conocimientos" data-text="conocimientos">Conocimientos</a></li>
+                <li><a href="#proyectos" data-text="proyectos">Proyectos</a></li>
+                <li><a href="#contacto" data-text="contacto">Contacto</a></li>
+                <li>
+                    <select id="idioma-selector" class="idioma-selector">
+                        <option value="es" data-icon="icons/Español.png">Español</option>
+                        <option value="en" data-icon="icons/English.png">English</option>
+                    </select>
+                </li>
             </ul>
             <div class="boton-menu">
                 <span></span>
@@ -33,14 +39,14 @@
         <div class="contenedor">
             <div class="presentacion-contenido">
                 <div class="texto-presentacion">
-                    <h1>Hola, soy <span class="nombre-destacado">Claudio César Gobbi</span></h1>
-                    <p class="titulo-profesional">Desarrollador de Software</p>
-                    <p class="descripcion">
+                    <h1><span data-text="saludo">Hola, soy</span> <span class="nombre-destacado">Claudio César Gobbi</span></h1>
+                    <p class="titulo-profesional" data-text="tituloProfesional">Desarrollador de Software</p>
+                    <p class="descripcion" data-text="descripcion">
                         Dedicado a crear soluciones digitales innovadoras y eficientes.
                     </p>
                     <div class="botones">
-                        <a href="#proyectos" class="boton boton-principal">Ver Proyectos</a>
-                        <a href="#contacto" class="boton boton-secundario">Contactar</a>
+                        <a href="#proyectos" class="boton boton-principal" data-text="verProyectos">Ver Proyectos</a>
+                        <a href="#contacto" class="boton boton-secundario" data-text="contactar">Contactar</a>
                     </div>
                 </div>
                 <div class="imagen-perfil">
@@ -52,24 +58,24 @@
 
     <section id="sobre-mi" class="sobre-mi">
         <div class="contenedor">
-            <h2 class="titulo-seccion">Sobre Mí</h2>
+            <h2 class="titulo-seccion" data-text="sobreMi">Sobre Mí</h2>
             <div class="contenido-sobre-mi">
                 <div class="texto-sobre-mi">
-                    <p>
+                        <p data-text="descripcionSobreMi">
                         Soy un desarrollador de software dedicado, con más de <span id="años-texto">1</span> año de experiencia. 
                         Me especializo en tecnologías modernas. Siempre estoy buscando aprender nuevas herramientas y metodologías para mejorar mis habilidades.
                     </p>
-                    <p>
+                    <p data-text="enfoqueSobreMi">
                         Mi enfoque se centra en escribir código limpio, escalable y mantenible; priorizando siempre las buenas prácticas de desarrollo y la eficiencia.
                     </p>
                     <div class="estadisticas">
                         <div class="estadistica">
-                            <h3>Estudios:</h3>
-                            <p>Tecnicatura Universitaria en Programación.<br>UTN - Gral. Pacheco.</p>
+                            <h3 data-text="estudios">Estudios:</h3>
+                            <p data-text="estudiosDescripcion">Tecnicatura Universitaria en Programación.<br>UTN - Gral. Pacheco.</p>
                         </div>
                         <div class="estadistica">
                             <h3 id="años-experiencia"></h3>
-                            <p>Años de Experiencia</p>
+                            <p data-text="añosExperiencia">Años de Experiencia</p>
                         </div>
                     </div>
                 </div>
@@ -79,10 +85,10 @@
 
     <section id="conocimientos" class="conocimientos">
         <div class="contenedor">
-            <h2 class="titulo-seccion">Conocimientos</h2>
+            <h2 class="titulo-seccion" data-text="conocimientos">Conocimientos</h2>
             <div class="grid-conocimientos">
                 <div class="categoria-conocimiento">
-                    <h3>Frontend</h3>
+                    <h3 data-text="frontend">Frontend</h3>
                     <div class="lista-conocimientos">
                         <div class="conocimiento">
                             <img src="icons/HTML5.png" alt="HTML5" class="icono">
@@ -99,7 +105,7 @@
                     </div>
                 </div>
                 <div class="categoria-conocimiento">
-                    <h3>Backend & Bases de Datos</h3>
+                    <h3 data-text="backend">Backend & Bases de Datos</h3>
                     <div class="lista-conocimientos">
                         <div class="conocimiento">
                             <img src="icons/C++.png" alt="C++" class="icono">
@@ -128,7 +134,7 @@
                     </div>
                 </div>
                 <div class="categoria-conocimiento">
-                    <h3>Herramientas</h3>
+                    <h3 data-text="herramientas">Herramientas</h3>
                     <div class="lista-conocimientos">
                         <div class="conocimiento">
                             <img src="icons/Delphi.png" alt="Delphi" class="icono">
@@ -154,22 +160,22 @@
 
     <section id="proyectos" class="proyectos">
         <div class="contenedor">
-            <h2 class="titulo-seccion">Proyectos</h2>
+            <h2 class="titulo-seccion" data-text="proyectos">Proyectos</h2>
             <div class="grid-proyectos">
                 <div class="tarjeta-proyecto">
                     <div class="imagen-proyecto">
                         <img src="Proyectos/Proyecto1.1.png" alt="Proyecto 1">
                     </div>
                     <div class="contenido-proyecto">
-                        <h3>Juego de Consola - Gran Cerdo.</h3>
-                        <p>Juego de dados.</p>
+                        <h3 data-text="proyecto1Titulo">Juego de Consola - Gran Cerdo.</h3>
+                        <p data-text="proyecto1Descripcion">Juego de dados.</p>
                         <div class="tecnologias">
                             <span>C++</span>
                             <span>C++</span>
                             <span>C++</span>
                         </div>
                         <div class="enlaces-proyecto">
-                            <a href="https://github.com/ClaudioCesarGobbi/Juego-Gran-Cerdo.git" class="boton boton-outline" target="_blank">Código</a>
+                            <a href="https://github.com/ClaudioCesarGobbi/Juego-Gran-Cerdo.git" class="boton boton-outline" target="_blank" data-text="codigo">Código</a>
                         </div>
                     </div>
                 </div>
@@ -178,15 +184,15 @@
                         <img src="Proyectos/Proyecto2.png" alt="Proyecto 2">
                     </div>
                     <div class="contenido-proyecto">
-                        <h3>Sistema de Gestión: Test de Aptitud Física</h3>
-                        <p>Aplicación de gestión de tests de capacidades físicas para elaborar planes de entrenamiento y hacer seguimiento de la evolución de las capacidades físicas de los deportistas.</p>
+                        <h3 data-text="proyecto2Titulo">Sistema de Gestión: Test de Aptitud Física</h3>
+                        <p data-text="proyecto2Descripcion">Aplicación de gestión de tests de capacidades físicas para elaborar planes de entrenamiento y hacer seguimiento de la evolución de las capacidades físicas de los deportistas.</p>
                         <div class="tecnologias">
                             <span>C++</span>
                             <span>C++</span>
                             <span>C++</span>
                         </div>
                         <div class="enlaces-proyecto">
-                            <a href="https://github.com/ClaudioCesarGobbi/Sistema-Gestion-Test-Aptitud-Fisica.git" class="boton boton-outline" target="_blank">Código</a>
+                            <a href="https://github.com/ClaudioCesarGobbi/Sistema-Gestion-Test-Aptitud-Fisica.git" class="boton boton-outline" target="_blank" data-text="codigo">Código</a>
                         </div>
                     </div>
                 </div>
@@ -195,15 +201,15 @@
                         <img src="Proyectos/Proyecto3.1.png" alt="Proyecto 3">
                     </div>
                     <div class="contenido-proyecto">
-                        <h3>Aplicación ABM de Artículos</h3>
-                        <p>Aplicación de escritorio que permite a los usuarios dar de alta, baja y modificar artículos con interfaz de usuario y base de datos en SQL Server.</p>
+                        <h3 data-text="proyecto3Titulo">Aplicación ABM de Artículos</h3>
+                        <p data-text="proyecto3Descripcion">Aplicación de escritorio que permite a los usuarios dar de alta, baja y modificar artículos con interfaz de usuario y base de datos en SQL Server.</p>
                         <div class="tecnologias">
                             <span>C#</span>
                             <span>.NET Framework</span>
                             <span>SQL Server</span>
                         </div>
                         <div class="enlaces-proyecto">
-                            <a href="https://github.com/ClaudioCesarGobbi/TP-WinForm-Equipo-10A..git" class="boton boton-outline" target="_blank">Código</a>
+                            <a href="https://github.com/ClaudioCesarGobbi/TP-WinForm-Equipo-10A..git" class="boton boton-outline" target="_blank" data-text="codigo">Código</a>
                         </div>
                     </div>
                 </div>
@@ -213,7 +219,7 @@
 
     <section class="redes-sociales">
         <div class="contenedor">
-            <h2 class="titulo-seccion">Conecta Conmigo</h2>
+            <h2 class="titulo-seccion" data-text="conectaConmigo">Conecta Conmigo</h2>
             <div class="enlaces-redes">
                 <a href="https://ar.linkedin.com/" class="enlace-red" target="_blank">
                     <img src="icons/Linkedin.png" alt="LinkedIn" class="icono">
@@ -237,11 +243,11 @@
 
     <section id="contacto" class="contacto">
         <div class="contenedor">
-            <h2 class="titulo-seccion">Contacto</h2>
+            <h2 class="titulo-seccion" data-text="contacto">Contacto</h2>
             <div class="contenido-contacto">
                 <div class="info-contacto">
-                    <h3>¡Hablemos!</h3>
-                    <p>¿Tenés un proyecto en mente? ¿Surgió un problema y no sabés como resolverlo? ¿Querés implementarar una mejora en tu sistema? Contactame, me encantaría escuchar sobre ello y poder ayudarte.</p>
+                    <h3 data-text="hablemos">¡Hablemos!</h3>
+                    <p data-text="descripcionContacto">¿Tenés un proyecto en mente? ¿Surgió un problema y no sabés como resolverlo? ¿Querés implementarar una mejora en tu sistema? Contactame, me encantaría escuchar sobre ello y poder ayudarte.</p>
                     <div class="detalles-contacto">
                         <div class="item-contacto">
                             <i class="fas fa-envelope"></i>
@@ -261,18 +267,18 @@
                 </div>
                 <form class="formulario-contacto">
                     <div class="grupo-formulario">
-                        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+                        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" data-placeholder="tuNombre" required>
                     </div>
                     <div class="grupo-formulario">
-                        <input type="email" id="email" name="email" placeholder="Tu email" required>
+                        <input type="email" id="email" name="email" placeholder="Tu email" data-placeholder="tuEmail" required>
                     </div>
                     <div class="grupo-formulario">
-                        <input type="text" id="asunto" name="asunto" placeholder="Asunto" required>
+                        <input type="text" id="asunto" name="asunto" placeholder="Asunto" data-placeholder="asunto" required>
                     </div>
                     <div class="grupo-formulario">
-                        <textarea id="mensaje" name="mensaje" placeholder="Tu mensaje" rows="5" required></textarea>
+                        <textarea id="mensaje" name="mensaje" placeholder="Tu mensaje" data-placeholder="tuMensaje" rows="5" required></textarea>
                     </div>
-                    <button type="submit" class="boton boton-principal">Enviar Mensaje</button>
+                    <button type="submit" class="boton boton-principal" data-text="enviarMensaje">Enviar Mensaje</button>
                 </form>
             </div>
         </div>

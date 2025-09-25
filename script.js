@@ -364,3 +364,158 @@ document.addEventListener('DOMContentLoaded', function() {
 window.addEventListener('load', function() {
     actualizarAñosExperiencia();
 });
+
+const textos = {
+    es: {
+        miPortfolio: "Mi Portfolio",
+        inicio: "Inicio",
+        sobreMi: "Sobre Mí",
+        conocimientos: "Conocimientos",
+        proyectos: "Proyectos",
+        contacto: "Contacto",
+        
+        saludo: "Hola, soy",
+        tituloProfesional: "Desarrollador de Software",
+        descripcion: "Dedicado a crear soluciones digitales innovadoras y eficientes.",
+        verProyectos: "Ver Proyectos",
+        contactar: "Contactar",
+        
+        descripcionSobreMi: "Soy un desarrollador de software dedicado, con más de 1 año de experiencia. Me especializo en tecnologías modernas. Siempre estoy buscando aprender nuevas herramientas y metodologías para mejorar mis habilidades.",
+        enfoqueSobreMi: "Mi enfoque se centra en escribir código limpio, escalable y mantenible; priorizando siempre las buenas prácticas de desarrollo y la eficiencia.",
+        estudios: "Estudios:",
+        estudiosDescripcion: "Tecnicatura Universitaria en Programación.<br>UTN - Gral. Pacheco.",
+        añosExperiencia: "Años de Experiencia",
+        
+        frontend: "Frontend",
+        backend: "Backend & Bases de Datos",
+        herramientas: "Herramientas",
+        
+        proyecto1Titulo: "Juego de Consola - Gran Cerdo.",
+        proyecto1Descripcion: "Juego de dados.",
+        proyecto2Titulo: "Sistema de Gestión: Test de Aptitud Física",
+        proyecto2Descripcion: "Aplicación de gestión de tests de capacidades físicas para elaborar planes de entrenamiento y hacer seguimiento de la evolución de las capacidades físicas de los deportistas.",
+        proyecto3Titulo: "Aplicación ABM de Artículos",
+        proyecto3Descripcion: "Aplicación de escritorio que permite a los usuarios dar de alta, baja y modificar artículos con interfaz de usuario y base de datos en SQL Server.",
+        codigo: "Código",
+        
+        conectaConmigo: "Conecta Conmigo",
+        
+        hablemos: "¡Hablemos!",
+        descripcionContacto: "¿Tenés un proyecto en mente? ¿Surgió un problema y no sabés como resolverlo? ¿Querés implementarar una mejora en tu sistema? Contactame, me encantaría escuchar sobre ello y poder ayudarte.",
+        tuNombre: "Tu nombre",
+        tuEmail: "Tu email",
+        asunto: "Asunto",
+        tuMensaje: "Tu mensaje",
+        enviarMensaje: "Enviar Mensaje"
+    },
+    en: {
+        miPortfolio: "My Portfolio",
+        inicio: "Home",
+        sobreMi: "About Me",
+        conocimientos: "Skills",
+        proyectos: "Projects",
+        contacto: "Contact",
+        
+        saludo: "Hello, I'm",
+        tituloProfesional: "Software Developer",
+        descripcion: "Dedicated to creating innovative and efficient digital solutions.",
+        verProyectos: "View Projects",
+        contactar: "Contact",
+        
+        descripcionSobreMi: "I am a dedicated software developer with more than 1 year of experience. I specialize in modern technologies. I'm always looking to learn new tools and methodologies to improve my skills.",
+        enfoqueSobreMi: "My approach focuses on writing clean, scalable and maintainable code; always prioritizing good development practices and efficiency.",
+        estudios: "Education:",
+        estudiosDescripcion: "University Technician in Programming.<br>UTN - Gral. Pacheco.",
+        añosExperiencia: "Years of Experience",
+        
+        frontend: "Frontend",
+        backend: "Backend & Databases",
+        herramientas: "Tools",
+        
+        proyecto1Titulo: "Console Game - Pig.",
+        proyecto1Descripcion: "Dice game.",
+        proyecto2Titulo: "Management System: Physical Fitness Test",
+        proyecto2Descripcion: "Application for managing physical capacity tests to develop training plans and track the evolution of athletes' physical capabilities.",
+        proyecto3Titulo: "Article CRUD Application",
+        proyecto3Descripcion: "Desktop application that allows users to create, read, update and delete articles with user interface and SQL Server database.",
+        codigo: "Code",
+        
+        conectaConmigo: "Connect With Me",
+        
+        hablemos: "Let's Talk!",
+        descripcionContacto: "Do you have a project in mind? Did a problem arise and you don't know how to solve it? Do you want to implement an improvement in your system? Contact me, I would love to hear about it and help you.",
+        tuNombre: "Your name",
+        tuEmail: "Your email",
+        asunto: "Subject",
+        tuMensaje: "Your message",
+        enviarMensaje: "Send Message"
+    }
+};
+
+function cambiarIdioma(idioma) {
+    const elementos = document.querySelectorAll('[data-text]');
+    elementos.forEach(elemento => {
+        const clave = elemento.getAttribute('data-text');
+        if (textos[idioma] && textos[idioma][clave]) {
+            if (clave === 'estudiosDescripcion') {
+                elemento.innerHTML = textos[idioma][clave];
+            } else {
+                elemento.textContent = textos[idioma][clave];
+            }
+        }
+    });
+    
+    const placeholders = document.querySelectorAll('[data-placeholder]');
+    placeholders.forEach(elemento => {
+        const clave = elemento.getAttribute('data-placeholder');
+        if (textos[idioma] && textos[idioma][clave]) {
+            elemento.placeholder = textos[idioma][clave];
+        }
+    });
+    
+    localStorage.setItem('idioma', idioma);
+    
+    document.getElementById('idioma-selector').value = idioma;
+}
+
+function actualizarBanderaSelector() {
+    const selector = document.getElementById('idioma-selector');
+    if (selector) {
+        const opcionSeleccionada = selector.options[selector.selectedIndex];
+        const icono = opcionSeleccionada.getAttribute('data-icon');
+        
+        let banderaMostrada = document.querySelector('.bandera-selector');
+        if (!banderaMostrada) {
+            banderaMostrada = document.createElement('img');
+            banderaMostrada.className = 'bandera-selector';
+            banderaMostrada.style.cssText = `
+                width: 16px;
+                height: 12px;
+                margin-right: 8px;
+                vertical-align: middle;
+            `;
+            selector.parentNode.insertBefore(banderaMostrada, selector);
+        }
+        
+        banderaMostrada.src = icono;
+        banderaMostrada.alt = opcionSeleccionada.textContent;
+    }
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    const idiomaGuardado = localStorage.getItem('idioma') || 'es';
+    
+    const selector = document.getElementById('idioma-selector');
+    if (selector) {
+        selector.value = idiomaGuardado;
+        
+        selector.addEventListener('change', function() {
+            cambiarIdioma(this.value);
+            actualizarBanderaSelector();
+        });
+        
+        actualizarBanderaSelector();
+    }
+    
+    cambiarIdioma(idiomaGuardado);
+});

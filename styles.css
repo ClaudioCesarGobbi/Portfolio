@@ -179,8 +179,8 @@ body {
 }
 
 .foto {
-    width: 350px;
-    height: 350px;
+    width: 380px;
+    height: 380px;
     object-fit: cover;
     border-radius: 50%;
     box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.6);
@@ -766,6 +766,97 @@ html {
 .imagen-proyecto:hover {
     opacity: 0.8;
 }
+
+.idioma-selector {
+    background: transparent;
+    color: var(--text-primary);
+    border: none;
+    padding: 0;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    outline: none;
+    text-decoration: none;
+    display: inline-block;
+    font-family: inherit;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: none;
+    padding-right: 20px;
+    position: relative;
+}
+
+.idioma-selector::after {
+    content: '▼';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0.7rem;
+    color: var(--text-primary);
+    pointer-events: none;
+}
+
+.idioma-selector:hover {
+    color: var(--primary-color);
+}
+
+.idioma-selector:hover::after {
+    color: var(--primary-color);
+}
+
+.idioma-selector:focus {
+    color: var(--primary-color);
+}
+
+.idioma-selector option {
+    background: #2d2d2d;
+    color: #bdbdbd;
+    padding: 10px;
+    font-size: 1rem;
+}
+
+.idioma-selector option:checked {
+    background: #6b8e23;
+    color: white;
+}
+
+.idioma-selector {
+    background: transparent;
+    color: var(--text-primary);
+    border: none;
+    padding: 0;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    outline: none;
+    text-decoration: none;
+    display: inline-block;
+    font-family: inherit;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: none;
+    padding-right: 20px;
+    position: relative;
+    min-width: 100px;
+}
+
+.idioma-selector option {
+    background-color: #2d2d2d !important;
+    color: #bdbdbd !important;
+    padding: 8px 12px !important;
+}
+
+.idioma-selector option:checked,
+.idioma-selector option[selected] {
+    background-color: #6b8e23 !important;
+    color: white !important;
+}
+
 
 @keyframes fadeIn {
     from { opacity: 0; }
